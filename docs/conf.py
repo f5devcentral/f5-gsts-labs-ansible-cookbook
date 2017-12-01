@@ -1,21 +1,5 @@
 # -*- coding: utf-8 -*-
 #
-#
-# BEGIN CONFIG
-# ------------
-#
-# REQUIRED: Your class/lab name
-classname = "Getting Started with F5 BIG-IP"
-
-# OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/your-class-repo"
-
-# OPTIONAL: Google Analytics
-# googleanalytics_id = 'UA-85156643-4'
-
-#
-# END CONFIG
-# ----------
 
 import os
 import sys
@@ -26,8 +10,25 @@ import string
 sys.path.insert(0, os.path.abspath('.'))
 import f5_sphinx_theme
 
+#
+# BEGIN CONFIG
+# ------------
+#
+# REQUIRED: Your class/lab name
+classname = "Ansible Cookbook"
+
+# OPTIONAL: The URL to the GitHub Repository for this class
+github_repo = "https://github.com/f5devcentral/f5-gsts-labs-ansible-cookbook"
+
+# OPTIONAL: Google Analytics
+# googleanalytics_id = 'UA-85156643-4'
+
 year = time.strftime("%Y")
-eventname = "Agility %s Hands-on Lab Guide" % (year)
+eventname = "GSTS %s Ansible Cookbook Lab Guide" % (year)
+
+#
+# END CONFIG
+# ----------
 
 rst_prolog = """
 .. |classname| replace:: %s
