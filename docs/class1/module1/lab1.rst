@@ -15,9 +15,7 @@ Ansible is distributed in several ways. These include
 * Via the PyPI (pronounced “pie pee eye”) package repository
 * Via source tarball
 
-The only proper way to install Ansible is via PyPI using the ``pip`` command line tool.
-
-.. code-block:: bash
+The only proper way to install Ansible is via PyPI using the ``pip`` command line tool. ::
 
    pip install ansible
 
