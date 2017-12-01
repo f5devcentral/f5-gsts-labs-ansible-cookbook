@@ -1,49 +1,52 @@
-Lab – Download the |bip| |ve| Image
------------------------------------
+Installing Ansible
+==================
 
-.. TODO:: Needs lab description
+Problem
+-------
 
-This lab will teach you how to download the |bip| |ve| image to your system.
+You need to install Ansible in an existing Linux environment
 
-Task – Open a Web Browser
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Solution
+--------
 
-.. TODO:: Needs task description
+Ansible is distributed in several ways. These include
 
-In this task you will open a web browser and navigate to the |f5| Downloads
-site.
+* Via the system’s package manager
+* Via the PyPI (pronounced “pie pee eye”) package repository
+* Via source tarball
 
-.. NOTE:: An account is required to download software.  You can create one at
-   https://login.f5.com/resource/registerEmail.jsp
+The only proper way to install Ansible is via PyPI using the ``pip`` command line tool.
 
-Follow these steps to complete this task:
+.. code-block:: bash
 
-#. Open your web browser
-#. Navigate to https://downloads.f5.com
-#. Login with your username and password.
-#. After logging in you should see the following window:
+   pip install ansible
 
-   |image1|
+Discussion
+----------
 
-Task – Download the Image
-~~~~~~~~~~~~~~~~~~~~~~~~~
+PyPI is considered the only correct way to install Ansible because it
+is the only method that the Ansible developers themselves can control.
 
-.. TODO:: Needs task description
+The packages that you find on Linux distributions such as Ubuntu, Fedora,
+or CentOS are maintained by members of the Ansible community and not by
+Ansible itself.
 
-In this task we will download the |f5| |bip| |ve| image to your system
+Additionally, the packages that ship with your operating system are
+frequently out-of-date.
 
-Follow these steps to complete this task:
+True, they may be current at the time of their release, but Ansible’s
+release cycle is quarterly, and therefore they can become out of date
+quickly.
 
-#. Click the 'Find a Download' button.
+The ``pip`` method of installing is not constrained to the demands of the
+Linux maintainers; it exists outside of their control. Therefore, it is
+the easiest way to get the most up-to-date software from Ansible.
 
-   .. image:: /_static/image002.png
+One more concern with the Linux packages is that they typically place
+files in a location different from where ``pip`` places them. This is
+totally expected, but it can have frustrating consequences should you
+choose to switch to the ``pip`` version (for example, to upgrade to a
+more recent version).
 
-#. Click the link that contains the |bip| TMOS software version you would like
-   to download.
-
-   .. IMPORTANT:: Be sure to click a link that has "\ |ve|" in the name
-
-#. Find the image appropriate for your hypervisor
-#. Download the image and save it to you local system
-
-.. |image1| image:: /_static/image001.png
+The differences in file locations can conflict with each other and leave
+your Ansible installation a complete mess. Best to just stick with ``pip``.

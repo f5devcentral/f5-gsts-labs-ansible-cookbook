@@ -1,39 +1,91 @@
-Lab – Install a |bip| |ve| image on a Hypervisor
-------------------------------------------------
+Installing module dependencies
+==============================
 
-.. TODO:: Needs lab description
+Problem
+-------
 
-In the previous lab we learned how to download the |bip| |ve| image.  Now, we
-can install the image onto a hypervisor.
+You need to install F5 Ansible module dependencies
 
-Task – Upload the image to your Hypervisor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Solution
+--------
 
-.. TODO:: Needs task description
+Each module has different requirements. The F5 Ansible modules
+require the following PyPI packages
 
-In this task you will upload the image to your hypervisor.
+* ``f5-sdk``
+* ``bigsuds``
+* ``netaddr``
+* ``objectpath``
+* ``isoparser``
+* ``lxml``
 
-Follow these steps to complete this task:
+These can be installed with the ``pip`` command
 
-.. rst-class:: task-stepsx
+.. code-block:: bash
 
-#. Open your hypervisor management console
-#. Figure out how to upload the image
+   pip install f5-sdk bigsuds netaddr objectpath isoparser lxml
 
-   .. ERROR:: These are bad instructions...
+Discussion
+----------
 
-#. Great!  You're done
+Unfortunately, there is no way to install all dependencies for
+all modules out of the box.
 
-Task – Start a |bip| |ve| Instance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Instead, you must find the dependencies for the module you are
+interested in, and install them manually. This can be done by either,
 
-.. TODO:: Needs task description
+#. Using the ``ansible-doc`` command
+#. By visiting the Ansible documentation page for the module.
 
-In this task we will start and instance of |bip| using the image uploaded in
-the previous task.
+Take ``bigip_selfip`` for example.
 
-Follow these steps to complete this task:
+ansible-doc command
+```````````````````
 
-#. Open your hypervisor management console
-#. Click the |bip| image
-#. Click the 'Start' button (or it's equivalent)
+The ``ansible-doc`` command to view  the requirements is, ::
+
+   ansible-doc bigip_selfip
+
+The requirements are shown in the output of this command.
+
+|image2|
+
+You may need to scroll to find this information.
+
+Visiting documentation page
+```````````````````````````
+
+Alternatively you can visit the docs for this module by navigating
+to `this link`_
+
+There is a direct link to the requirements list if you mouse over the
+**Requirements** header
+
+|image1|
+
+Note the chain icon to the right of the header. That link will
+`lead you here`_.
+
+Installing a development copy of F5 SDK
+```````````````````````````````````````
+
+One behavior that is frequently done is the installation of a
+development copy of the F5 Python SDK. This is usually safe to
+do as the SDK is always in-line with the Ansible modules.
+
+To do this, run the following command::
+
+  pip install --upgrade git+https://github.com/F5Networks/f5-common-python.git
+
+This is usually a required step for Ansible upgrades and future
+releases of Ansible because we often include new APIs in the SDK
+that Ansible will make use of.
+
+.. |image1| image:: /_static/class1/requirements-header.png
+   :height: 5in
+   :width: 6in
+.. |image2| image:: /_static/class1/ansible-doc-output.png
+   :height: 4in
+   :width: 6in
+.. _this link: http://docs.ansible.com/ansible/latest/bigip_selfip_module.html
+.. _lead you here: http://docs.ansible.com/ansible/latest/bigip_selfip_module.html#requirements-on-host-that-executes-module

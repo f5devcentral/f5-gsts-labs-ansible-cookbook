@@ -1,10 +1,17 @@
-Module – Installing a BIG-IP Virtual Edition
-=============================================
+Module – Installation and configuration of Ansible
+==================================================
 
-.. TODO:: Needs module description
+The first step in using Ansible with an F5 product is to ensure that you
+have done the absolute minimum required to make Ansible work.
 
-In this module you will learn how to install a |f5| |bip| |ve| into your
-environment.
+The recipes in this chapter look at methods for installing and configuring
+Ansible. We cover things such as installing the tool, establishing the
+correct directory layouts, and creating necessary files.
+
+We will focus on using Ansible 2.5 for this class. This specific version
+of Ansible, at the time of this writing, is not officially released. This
+will not be a problem for us, and will also serve to prepare you for what
+is coming in the future.
 
 .. toctree::
    :maxdepth: 1
