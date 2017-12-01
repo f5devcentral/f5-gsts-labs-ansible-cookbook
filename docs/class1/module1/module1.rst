@@ -1,3 +1,5 @@
+.. _module1:
+
 Module – Installation and configuration of Ansible
 ==================================================
 
