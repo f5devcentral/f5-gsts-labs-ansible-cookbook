@@ -1,3 +1,3 @@
-Writing once, re-using many times
+Getting assistance with a problem
 =================================
 

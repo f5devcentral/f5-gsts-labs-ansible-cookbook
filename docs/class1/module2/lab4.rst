@@ -1,3 +1,3 @@
-Keeping secrets secret
+Adding nodes to a pool
 ======================
 

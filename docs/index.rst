@@ -13,5 +13,6 @@ Welcome to the |classbold| lab at F5 GSTS |year|
    :caption: Contents:
    :glob:
 
-   intro*
+   bigipbasics
+   labinfo/labinfo
    class*/class*

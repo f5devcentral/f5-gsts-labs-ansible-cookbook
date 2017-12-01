@@ -1,4 +1,3 @@
-Enable verbose debugging
+Creating a new partition
 ========================
-
 

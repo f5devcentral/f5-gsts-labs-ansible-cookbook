@@ -1,3 +1,3 @@
-Writing once, re-using many times
+Creating an LTM policy with rules
 =================================
 

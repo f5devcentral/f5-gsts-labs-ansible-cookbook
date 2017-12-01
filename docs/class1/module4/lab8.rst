@@ -1,3 +1,3 @@
-Writing once, re-using many times
+Dealing with unsupported versions
 =================================
 
