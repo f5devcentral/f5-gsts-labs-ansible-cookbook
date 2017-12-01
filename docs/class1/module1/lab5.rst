@@ -18,23 +18,29 @@ Then add the following line to the ``ansible.cfg`` file ::
 
    library = ./library
 
-
 Discussion
 ----------
 
-Our unstable code exists for the following reasons,
+There are a number of settings that you can change in an ansible.cfg file.
+The entire list is `shown here`_.
 
-* We do not want to upstream everything. This may be because the underlying
-  product is immature or not fully supported
-* Due to the above, we can’t put it into upstream Ansible. If we did, this would
-  create a support liability for us.
-* It allows us to work independently of anything Ansible does.
+Amongst the list of things that I routinely change, are the following
 
-Will you need to get unstable code? Probably.
+* ``retry_files_enabled = False``
+* ``host_key_checking = False``
+* ``roles_path = ./roles``
+* ``library = ./library``
 
-In many cases, the unstable code is just as good as what exists in Ansible today,
-but you won’t know this unless you try to use it.
+Values for paths (such as ``roles_path`` and ``library`` can be separated by
+a colon. For example, ::
 
-If you find a module in the unstable branch that is not in the stable
-(Ansible upstream) product, you will want to let us know about this by
-:doc:`filing an issue</class1/module4/lab3>`.
+   roles_path = ./roles-dir-1:/path/to/absolute-dir2
+
+I **never** use the system config found at ``/etc/ansible/ansible.cfg``. This
+is an **anti-pattern**, do not do it. Instead, put your changes for you specific
+project in a config file found in your project’s top-level directory.
+
+If you use the system file, it will affect all the users of the system and all
+the uses of Ansible on the system. This is almost never what you want.
+
+.. _shown here: http://docs.ansible.com/ansible/latest/intro_configuration.html
