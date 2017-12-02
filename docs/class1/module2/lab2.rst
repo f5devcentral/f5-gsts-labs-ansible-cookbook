@@ -1,3 +1,0 @@
-Writing once, re-using many times
-=================================
-

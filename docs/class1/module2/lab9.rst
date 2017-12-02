@@ -1,3 +1,0 @@
-Applying an ASM policy
-======================
-

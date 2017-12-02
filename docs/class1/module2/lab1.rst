@@ -1,3 +1,0 @@
-Creating a pool on BIG-IP
-=========================
-
