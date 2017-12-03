@@ -1,0 +1,2 @@
+broken ansible_host=10.1.1.4 ansible_python_interpreter=/.virtualenvs/lab4.6-empty/bin/python
+working ansible_host=10.1.1.4 ansible_python_interpreter=/.virtualenvs/lab4.6/bin/python
