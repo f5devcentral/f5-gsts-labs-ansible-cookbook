@@ -1,0 +1,19 @@
+- name: Labb 4.5
+  hosts: all
+  connection: local
+
+  tasks:
+    - name: Run a task
+      set_fact:
+        fact1: foo
+        fact2: bar
+
+    - name: Run a second task
+      debug:
+        var: fact1
+      when: fact2 == 'baz'
+
+    - name: Run a third task
+      debug:
+        var: fact1
+      when: fact2 == 'bar'

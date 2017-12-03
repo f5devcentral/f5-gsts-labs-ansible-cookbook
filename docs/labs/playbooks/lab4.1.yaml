@@ -1,0 +1,10 @@
+---
+
+- name: Lab 4.1
+  hosts: all
+  connection: local
+
+  tasks:
+    - name: Raises an error
+      foo41:
+        baz: foo
