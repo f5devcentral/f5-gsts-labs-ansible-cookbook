@@ -1,0 +1,34 @@
+---
+
+- name: Lab 4.2
+  hosts: all
+
+  tasks:
+    - name: Create VLAN
+      bigip_vlan:
+        name: lab4.2
+        password: "{{ bigip_password }}"
+        server: "{{ ansible_host }}"
+        slow_ramp_time: "120"
+        user: "{{ bigip_username }}"
+        validate_certs: "{{ validate_certs }}"
+
+    - name: Set VLAN tag, int
+      bigip_vlan:
+        name: lab4.2
+        tag: 1234
+        password: "{{ bigip_password }}"
+        server: "{{ ansible_host }}"
+        slow_ramp_time: "120"
+        user: "{{ bigip_username }}"
+        validate_certs: "{{ validate_certs }}"
+
+    - name: Set VLAN description
+      bigip_vlan:
+        description: This is the lab 4.2 VLAN
+        name: lab4.2
+        password: "{{ bigip_password }}"
+        server: "{{ ansible_host }}"
+        slow_ramp_time: "120"
+        user: "{{ bigip_username }}"
+        validate_certs: "{{ validate_certs }}"

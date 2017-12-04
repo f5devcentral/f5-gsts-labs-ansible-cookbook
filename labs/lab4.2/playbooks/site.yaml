@@ -1,0 +1,10 @@
+---
+
+- name: Lab 4.2
+  hosts: server
+
+  tasks:
+    - name: Install redis
+      apt:
+        name: redis-server
+        update_cache: yes
