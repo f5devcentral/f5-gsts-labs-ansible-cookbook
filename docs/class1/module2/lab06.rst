@@ -11,7 +11,7 @@ Solution
 
 Use the ``bigip_iapp_template`` module.
 
-#. Create a ``lab2.6`` directory in the ``labs`` directory.
+#. Change into the ``lab2.6`` directory in the ``labs`` directory.
 #. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
 #. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
    fact with the value ``10.1.1.4``
@@ -31,7 +31,7 @@ Use the ``bigip_iapp_template`` module.
      tasks:
        - name: Add the iApp
          bigip_iapp_template:
-           content: "{{ lookup('template', 'appsvcs_integration_v2.0.004.tmpl') }}"
+           content: "{{ lookup('file', 'appsvcs_integration_v2.0.004.tmpl') }}"
            password: "{{ password }}"
            server: 10.1.1.4
            state: present
