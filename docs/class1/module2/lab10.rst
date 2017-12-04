@@ -11,10 +11,18 @@ Solution
 
 Use the ``bigip_policy`` module to create a policy with a generic rule.
 Then use the ``bigip_policy_rule`` module to modify the ``actions`` and ``conditions``
-on that rule as needed. ::
+on that rule as needed.
+
+#. Change into the ``lab2.10`` directory in the ``labs`` directory.
+#. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
+#. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.4``
+#. *Type* the following into the ``playbooks/site.yaml`` file.
+
+  ::
 
    - name: An example LTM policy playbook
-     hosts: big-ip01
+     hosts: bigip
      connection: local
 
      vars:
@@ -47,6 +55,12 @@ on that rule as needed. ::
            actions:
              - type: enable
                asm_policy: foo-policy
+
+Run this playbook, from the ``lab2.10`` directory like so
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
 
 Discussion
 ----------

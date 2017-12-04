@@ -9,7 +9,16 @@ You need to write the contents of a file (containing variables) to a remote loca
 Solution
 --------
 
-Use the ``template`` module. ::
+Use the ``template`` module.
+
+#. Create a ``lab1.9`` directory in the ``labs`` directory.
+#. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
+#. Change the ``playbooks/site.yaml`` file to resemble the following.
+#. Add a ``server`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.6``
+
+ ::
+
 
    - name: An example copy playbook
      hosts: server
@@ -19,6 +28,12 @@ Use the ``template`` module. ::
          template:
            src: httpd.conf
            dest: /etc/apache2/000-default
+
+Run this playbook, from the ``lab1.9`` directory like so
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
 
 Discussion
 ----------

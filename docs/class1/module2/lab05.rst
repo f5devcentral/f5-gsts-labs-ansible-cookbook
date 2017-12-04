@@ -9,10 +9,18 @@ You need to create a virtual server, associated with a pool, on a BIG-IP
 Solution
 --------
 
-Use the ``bigip_virtual_server`` module. ::
+Use the ``bigip_virtual_server`` module.
+
+#. Create a ``lab2.5`` directory in the ``labs`` directory.
+#. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
+#. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.4``
+#. *Type* the following into the ``playbooks/site.yaml`` file.
+
+ ::
 
    - name: An example virtual server playbook
-     hosts: big-ip01
+     hosts: bigip
      connection: local
 
      vars:
@@ -36,6 +44,12 @@ Use the ``bigip_virtual_server`` module. ::
              - http
              - clientssl
            validate_certs: "{{ validate_certs }}"
+
+Run this playbook, from the ``lab2.5`` directory like so
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
 
 Discussion
 ----------

@@ -9,10 +9,18 @@ You need to create a service from the HTTP iApp
 Solution
 --------
 
-Use the ``bigip_iapp_service`` module. ::
+Use the ``bigip_iapp_service`` module.
+
+#. Change to ``lab2.7`` directory in the ``labs`` directory.
+#. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
+#. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.4``
+#. *Type* the following into the ``playbooks/site.yaml`` file.
+
+ ::
 
    - name: An example iApp service playbook
-     hosts: big-ip01
+     hosts: bigip
      connection: local
 
      vars:
@@ -23,7 +31,7 @@ Use the ``bigip_iapp_service`` module. ::
      tasks:
        - name: Add the iApp
          bigip_iapp_service:
-           name: tests
+           name: http-iapp1
            template: f5.http
            password: "{{ password }}"
            server: 10.1.1.4
@@ -65,6 +73,12 @@ Use the ``bigip_iapp_service`` module. ::
                        - 0
                - name: server_pools__servers
 
+Run this playbook, from the ``lab2.7`` directory like so
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
+
 Discussion
 ----------
 
@@ -77,16 +91,16 @@ The easiest way to provide data to this module is in the form of a content
 To use that approach would require a JSON file and a specific format of Task in
 your Playbook. An example is below. ::
 
-       - name: Add the iApp
-         bigip_iapp_service:
-           name: tests
-           template: f5.http
-           password: "{{ password }}"
-           server: 10.1.1.4
-           validate_certs: "{{ validate_certs }}"
-           state: present
-           user: "{{ username }}"
-           parameters: "{{ lookup('file', '../files/http-iapp-parameters.json') }}"
+   - name: Add the iApp
+     bigip_iapp_service:
+       name: http-iapp2
+       template: f5.http
+       password: "{{ password }}"
+       server: 10.1.1.4
+       validate_certs: "{{ validate_certs }}"
+       state: present
+       user: "{{ username }}"
+       parameters: "{{ lookup('file', '../files/http-iapp-parameters.json') }}"
 
 Observe how we changed the parameters to use a lookup instead of providing the
 YAML format.
@@ -105,6 +119,10 @@ up. That is in the ``/path/to/file/`` value; also wrapped in quotes.
 
 The parentheses ``(`` and ``)`` are also important, and required, in the places that
 you see them.
+
+Configure the ``lab2.7/playbooks/site.yaml`` above to replace your existing task with the
+task in the Discussion. Run the playbook as you did earlier. You should observe similar
+behavior as before, except a different iApp service, ``http-iapp2`` should now exist.
 
 Also, yes, in the solution's example, the ``parameters`` argument really looks like
 that; the iApp service data structures them self are responsible for that. We

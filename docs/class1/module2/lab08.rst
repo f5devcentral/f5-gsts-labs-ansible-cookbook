@@ -9,10 +9,18 @@ You need to provision ASM on the BIG-IP
 Solution
 --------
 
-Use the ``bigip_provision`` module. ::
+Use the ``bigip_provision`` module.
+
+#. Create a ``lab2.8`` directory in the ``labs`` directory.
+#. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
+#. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.4``
+#. *Type* the following into the ``playbooks/site.yaml`` file.
+
+ ::
 
    - name: An example provision playbook
-     hosts: big-ip01
+     hosts: bigip
      connection: local
 
      vars:
@@ -28,6 +36,12 @@ Use the ``bigip_provision`` module. ::
            server: 10.1.1.4
            validate_certs: "{{ validate_certs }}"
            user: "{{ username }}"
+
+Run this playbook, from the ``lab2.8`` directory like so
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
 
 Discussion
 ----------

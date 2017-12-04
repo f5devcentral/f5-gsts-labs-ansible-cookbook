@@ -13,7 +13,7 @@ The procedure for this is `documented here`_. We will use ``bigip_software``
 for this example.
 
 Ensure that you have created a directory named ``library`` as shown in
-:doc:`1.3 Expected File Layout<./lab3>`.
+:doc:`1.3 Expected File Layout</class1/module1/lab03>`.
 
 Next, download the source for this module using ``curl`` ::
 
@@ -39,4 +39,6 @@ but you won’t know this unless you try to use it.
 
 If you find a module in the unstable branch that is not in the stable
 (Ansible upstream) product, you will want to let us know about this by
-:doc:`filing an issue</class1/module4/lab3>`.
+:doc:`filing an issue</class1/module4/lab03>`.
+
+.. _documented here: http://clouddocs.f5.com/products/orchestration/ansible/devel/usage/installing-modules.html

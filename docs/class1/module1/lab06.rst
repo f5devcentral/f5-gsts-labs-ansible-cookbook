@@ -14,7 +14,7 @@ Use a static inventory file.
 A static inventory file is a INI formatted file. Here is an example ::
 
    server ansible_host=10.1.1.6
-   big-ip01 ansible_host=10.1.1.4
+   bigip ansible_host=10.1.1.4
    client ansible_host=10.1.1.5
 
 The above text you be put in a file named ``hosts`` in the ``inventory`` directory.
@@ -23,6 +23,15 @@ You would use the inventory like so, ::
 
    ansible-playbook -i inventory/hosts playbooks/site.yaml
 
+#. Create a ``lab1.6`` directory in the ``labs`` directory.
+#. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
+#. Add a ``server`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.6``
+#. Add a ``client`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.5``
+#. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
+   fact with the value ``10.1.1.4``
+
 Discussion
 ----------
 
@@ -30,7 +39,7 @@ Static hosts are the original means of specifying an inventory to Ansible.
 
 The format mentioned in the solution above includes the following information,
 
-#. A host named ``big-ip01``. This value will be put in Ansible’s ``inventory_hostname``
+#. A host named ``bigip``. This value will be put in Ansible’s ``inventory_hostname``
    variable.
 #. A host *fact* called ``ansible_host``. This is a reserved variable in Ansible.
    It is used by Ansible to connect to the remote host. Its value is ``10.1.1.4``.
