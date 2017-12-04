@@ -131,11 +131,11 @@ need to do serious squirrel levels of debugging in either your own code, or the
 code of others.
 
 .. |image1| image:: /_static/class1/lab4.2.1.png
-   :height: 5in
+   :height: 4in
    :width: 6in
 .. |image2| image:: /_static/class1/lab4.2.2.png
-   :height: 5in
+   :height: 4in
    :width: 6in
 .. |image3| image:: /_static/class1/lab4.2.3.png
-   :height: 5in
+   :height: 7in
    :width: 6in

@@ -29,8 +29,6 @@ This is normal output
   ::
 
    TASK [Raises an error] ***************************************************
-   **************************************************************************
-   ************************************************************************
    An exception occurred during task execution. To see the full traceback, use
    -vvv. The error was: Exception: An error occurred
    fatal: [localhost]: FAILED! => {"changed": false, "module_stderr": "Traceback
@@ -49,7 +47,7 @@ This is verbose output
 
   ::
 
-   TASK [Raises an error] *****************************************************************************************************************************************************************************************************
+   TASK [Raises an error] ****************************************************
    task path: /Users/trupp/src/f5-gsts-labs-ansible-cookbook/docs/labs/playbooks/lab4.1.yaml:8
    Using module file /Users/trupp/src/f5-gsts-labs-ansible-cookbook/docs/labs/library/foo41.py
    <localhost> ESTABLISH LOCAL CONNECTION FOR USER: trupp

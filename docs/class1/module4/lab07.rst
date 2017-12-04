@@ -80,8 +80,8 @@ remote authentication out.
 This is almost never an Ansible problem. 99.999% of the time it is a user problem.
 
 .. |image1| image:: /_static/class1/lab4.7.1.png
-   :height: 5in
+   :height: 3in
    :width: 6in
 .. |image2| image:: /_static/class1/lab4.7.2.png
-   :height: 5in
+   :height: 7in
    :width: 6in

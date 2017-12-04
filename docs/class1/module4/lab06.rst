@@ -127,11 +127,11 @@ nothing. In that case, you will need the dependencies installed in the **system*
 
 
 .. |image1| image:: /_static/class1/lab4.6.1.png
-   :height: 5in
+   :height: 4in
    :width: 6in
-.. |image1| image:: /_static/class1/lab4.6.1.png
-   :height: 5in
+.. |image2| image:: /_static/class1/lab4.6.2.png
+   :height: 4in
    :width: 6in
-.. |image1| image:: /_static/class1/lab4.6.1.png
-   :height: 5in
+.. |image3| image:: /_static/class1/lab4.6.3.png
+   :height: 4in
    :width: 6in
