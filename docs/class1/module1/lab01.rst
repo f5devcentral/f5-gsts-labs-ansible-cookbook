@@ -19,6 +19,16 @@ The only proper way to install Ansible is via PyPI using the ``pip`` command lin
 
    pip install ansible
 
+For the remainder of these labs we will be using the development copy of Ansible.
+
+Since this is not yet available, we'll install it directly from Github
+
+  ::
+
+  $ pip install --upgrade git+https://github.com/ansible/ansible.git
+
+This will include an updated set of modules that will be released in March.
+
 Discussion
 ----------
 
