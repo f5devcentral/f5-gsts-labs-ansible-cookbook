@@ -31,6 +31,13 @@ Connect using Web Shell
    button.  Then click the :guilabel:`WEB SHELL` option.  A new browser window/tab
    will be opened.
 
+#. Ensure that the `f5-gsts-labs-ansible-cookbook` directory in your `/root` directory
+   is up-to-date.
+
+   This can be done with the following command
+
+   ``cd /root/f5-gsts-labs-ansible-cookbook && git pull``
+
 #. Select how you would like to continue:
 
    - Review: :ref:`bigipbasics`
