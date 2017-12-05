@@ -29,10 +29,18 @@ Use the ``bigip_iapp_service`` module.
        password: admin
 
      tasks:
-       - name: Add the iApp
+       - name: Add the iApp template
+         bigip_iapp_template:
+           content: "{{ lookup('file', 'f5.http.v1.2.0rc4.tmpl') }}"
+           password: "{{ password }}"
+           server: 10.1.1.4
+           state: present
+           user: admin
+
+       - name: Add the iApp Service
          bigip_iapp_service:
            name: http-iapp1
-           template: f5.http
+           template: f5.http.v1.2.0rc4
            password: "{{ password }}"
            server: 10.1.1.4
            validate_certs: "{{ validate_certs }}"
