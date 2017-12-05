@@ -19,7 +19,7 @@ Use the ``bigip_iapp_template`` module.
 
  ::
 
-   - name: An example virtual server playbook
+   - name: An example iApp template playbook
      hosts: bigip
      connection: local
 

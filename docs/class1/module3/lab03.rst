@@ -34,8 +34,11 @@ For example,
 
 #. Create a ``lab3.3`` directory in the ``labs`` directory.
 #. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
-#. Add a ``server`` host to the ansible inventory and give it an ``ansible_host``
-   fact with the value ``10.1.1.6``
+#. Add a ``server`` host to the ansible inventory and give it,
+
+   * an ``ansible_host`` fact with the value ``10.1.1.6``
+   * add an ``ansible_python_interpreter`` fact with the value ``/usr/bin/python3``
+
 #. *Type* the following into the ``playbooks/site.yaml`` file.
 
   ::

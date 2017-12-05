@@ -10,7 +10,7 @@ Solution
 --------
 
 Reboot the device with ``bigip_command``, then use ``bigip_wait`` to wait
-for the device to come back up and be ready to take configuration. ::
+for the device to come back up and be ready to take configuration.
 
 #. Create a ``lab2.13`` directory in the ``labs`` directory.
 #. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
