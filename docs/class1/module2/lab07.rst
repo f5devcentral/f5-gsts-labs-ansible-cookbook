@@ -47,18 +47,9 @@ Use the ``bigip_iapp_service`` module.
            state: present
            user: "{{ username }}"
            parameters:
-             variables:
-               - name: var__vs_address
-                 value: 1.1.1.1
-               - name: pm__apache_servers_for_http
-                 value: 2.2.2.1:80
-               - name: pm__apache_servers_for_https
-                 value: 2.2.2.2:80
              lists:
                - name: irules__irules
                  value:
-                   - foo
-                   - bar
              tables:
                - name: basic__snatpool_members
                - name: net__snatpool_members
@@ -80,6 +71,35 @@ Use the ``bigip_iapp_service`` module.
                        - 80
                        - 0
                - name: server_pools__servers
+             variables:
+               - name: var__vs_address
+                 value: 1.1.1.1
+               - name: pm__apache_servers_for_http
+                 value: 2.2.2.1:80
+               - name: pm__apache_servers_for_https
+                 value: 2.2.2.2:80
+               - name: client__http_compression
+                 value: "/#create_new#"
+               - name: monitor__monitor
+                 value: "/#create_new#"
+               - name: monitor__uri
+                 value: "/"
+               - name: net__client_mode
+                 value: wan
+               - name: net__server_mode
+                 value: lan
+               - name: pool__addr
+                 value: 10.10.10.10
+               - name: pool__pool_to_use
+                 value: "/#create_new#"
+               - name: pool__port
+                 value: 80
+               - name: ssl__mode
+                 value: no_ssl
+               - name: ssl_encryption_questions__advanced
+                 value: no
+               - name: ssl_encryption_questions__help
+                 value: hide
 
 Run this playbook, from the ``lab2.7`` directory like so
 
