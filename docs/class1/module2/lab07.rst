@@ -31,7 +31,7 @@ Use the ``bigip_iapp_service`` module.
      tasks:
        - name: Add the iApp template
          bigip_iapp_template:
-           content: "{{ lookup('file', 'f5.http.v1.2.0rc4.tmpl') }}"
+           content: "{{ lookup('file', '../files/f5.http.v1.2.0rc4.tmpl') }}"
            password: "{{ password }}"
            server: 10.1.1.4
            state: present
@@ -67,7 +67,7 @@ Use the ``bigip_iapp_service`` module.
                    - connection_limit
                  rows:
                    - row:
-                       - "none"
+                       - ""
                        - 80
                        - 0
                - name: server_pools__servers
