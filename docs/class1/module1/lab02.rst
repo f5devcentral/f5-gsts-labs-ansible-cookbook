@@ -18,12 +18,13 @@ require the following PyPI packages
 * ``objectpath``
 * ``isoparser``
 * ``lxml``
+* ``deepdiff``
 
 These can be installed with the ``pip`` command
 
 .. code-block:: bash
 
-   pip install f5-sdk bigsuds netaddr objectpath isoparser lxml
+   pip install f5-sdk bigsuds netaddr objectpath isoparser lxml deepdiff
 
 Discussion
 ----------
