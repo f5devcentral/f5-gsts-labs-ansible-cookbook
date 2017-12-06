@@ -76,7 +76,7 @@ you called ``item``. The value in this variable will change with each iteration 
 the loop to match the value in the loop.
 
 The dot that separates ``item`` from the other words is Ansible lingo for a method
-of referring to subways.
+of referring to subkeys.
 
 In our ``loop`` list, we specified a *list of dictionaries*. A dictionary has key
 names, and those names can have values of any type. In our case, the key names for
