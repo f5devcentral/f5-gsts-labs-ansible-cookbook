@@ -23,7 +23,7 @@ Run this playbook, from the ``lab3.1`` directory like so
 
   ::
 
-   $ ansible-playbook -i inventory/hosts lab3.1.yaml -e "username=admin password=admin"
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml -e "username=admin password=admin"
 
 Discussion
 ----------

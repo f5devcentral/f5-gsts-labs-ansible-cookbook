@@ -33,7 +33,7 @@ Use the ``--step`` argument of ``ansible-playbook``
 
      vars:
        send_string1: "GET /hr\r\n"
-       monitor_name: "monitor1"
+       monitor_name: "monitor2"
 
      tasks:
        - name: Create HTTP Monitor
@@ -71,11 +71,11 @@ You have this test playbook, but you are not sure if they Tasks are actually doi
 their work because the last Task removes the monitor. How do you check that 1 actually
 changed the remote device? Sure, it may report changed, but did it *really* change?
 
-You can do this by specifying the ``—step`` argument to your Playbook.
+You can do this by specifying the ``—-step`` argument to your Playbook.
 
   ::
 
-   $ ansible-playbook -i inventory/hosts site.yaml --step
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml --step
 
 The Play will run, but will Ansible will prompt you to either do the Task, Skip the
 Task, or Continue on with all Tasks.
@@ -84,7 +84,7 @@ For example,
 
   ::
 
-   $ ansible-playbook -i inventory/hosts lab3.5.yaml --step
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml --step
 
    PLAY [An example partition playbook] ****************************************************************************************************
    Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: y

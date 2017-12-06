@@ -44,6 +44,12 @@ Use the ``bigip_irule`` module and the ``loop`` keyword.
             - name: irule3
               file: irule-03.tcl
 
+Run this playbook, from the ``lab3.7`` directory like so
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
+
 Discussion
 ----------
 
