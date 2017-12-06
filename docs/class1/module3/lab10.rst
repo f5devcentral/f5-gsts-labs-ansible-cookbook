@@ -93,11 +93,13 @@ Create the file ``playbooks/site.yaml`` in the ``lab3.10`` directory; **not** th
      vars_prompt:
        - name: bigip_username
          prompt: "Enter the BIG-IP username"
+         private: no
        - name: bigip_password
          prompt: "Enter the BIG-IP password"
-         secret: yes
+         private: yes
        - name: bigip_server
          prompt: "Enter the BIG-IP server address"
+         private: no
 
      roles:
        - app1
@@ -200,6 +202,8 @@ Edit the ``tasks/main.yaml`` file to include the following
        port: 80
        irules:
          - irule1
+       profiles:
+         - http
        snat: Automap
        partition: "{{ tenant }}"
        user: "{{ bigip_username }}"
