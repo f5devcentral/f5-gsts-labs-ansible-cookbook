@@ -25,8 +25,15 @@ Use the ``copy`` module.
      tasks:
        - name: Copy a local file to the remote system
          copy:
-           src: cirros-0.3.5-x86_64-disk.img
-           dest: /var/www/html/cirros-0.3.5-x86_64-disk.img
+           src: ../files/sample-download.txt
+           dest: /var/www/html/sample-download.txt
+
+This playbooks requires a file named ``sample-download.txt`` be created in the ``files`` directory
+of your lab. Therefore, create this file. You can put in it any text you want. How about,
+
+  ::
+
+   This was uploaded by Ansible
 
 Run this playbook, from the ``lab1.8`` directory like so
 

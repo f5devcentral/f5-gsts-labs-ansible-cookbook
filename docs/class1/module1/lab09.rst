@@ -20,14 +20,24 @@ Use the ``template`` module.
  ::
 
 
-   - name: An example copy playbook
+   - name: An example template playbook
      hosts: server
 
      tasks:
-       - name: Template apache configuration to disk
+       - name: Template a file to disk
          template:
-           src: httpd.conf
-           dest: /etc/apache2/000-default
+           src: ../templates/sample-template.txt
+           dest: /tmp/sample-template.txt
+
+This playbooks requires a file named ``sample-template.txt`` be created in the ``templates``
+directory of your lab. Therefore, create this file. You can put in it any text you want. How
+about,
+
+  ::
+
+   This was uploaded by Ansible. The remote machine info is,
+   name: {{ inventory_hostname }}
+   ip: {{ ansible_host }}
 
 Run this playbook, from the ``lab1.9`` directory like so
 
