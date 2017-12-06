@@ -121,6 +121,7 @@ For example, this playbook will correct your problem:
          - name: Disable pool member for upgrading
            bigip_pool_member:
              pool: foo
+             port: 80
              name: "{{ inventory_hostname }}"
              state: disabled
              password: "{{ password }}"
@@ -137,6 +138,7 @@ For example, this playbook will correct your problem:
          - name: Re-enable pool member after upgrading
            bigip_pool_member:
              pool: foo
+             port: 80
              name: "{{ inventory_hostname }}"
              state: enabled
              password: "{{ password }}"
