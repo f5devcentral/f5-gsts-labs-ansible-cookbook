@@ -25,7 +25,7 @@ directory. It is that directory in which you put the role directory.
 
   ::
 
-   $ mkdir roles/app1
+   $ mkdir -p roles/app1
 
 A role directory has the same directory structure that we created in the first
 module. There are exceptions though. They are
@@ -80,7 +80,7 @@ To accomplish the above, let’s do the following
 Construct a playbook to use your role
 `````````````````````````````````````
 
-Create the file ``playbooks/site.yaml``. Put the following in it.
+Create the file ``playbooks/site.yaml`` in the ``lab3.10`` directory; **not** the role directory. Put the following in it.
 
   ::
 
@@ -107,7 +107,7 @@ This is the playbook we will use.
 Create default variables
 ````````````````````````
 
-Edit the ``defaults/main.yaml`` file, add the following
+In the ``app1`` role directory, edit the ``defaults/main.yaml`` file, add the following
 
   ::
 
@@ -132,17 +132,17 @@ In this file, put the following
 
    - name: Check to see if bigip username credential missing
      fail:
-       msg: "You must provide a 'bigip_username' variable
+       msg: "You must provide a 'bigip_username' variable"
      when: bigip_username is not defined
 
    - name: Check to see if bigip passwrd credential missing
      fail:
-       msg: "You must provide a 'bigip_password' variable
+       msg: "You must provide a 'bigip_password' variable"
      when: bigip_password is not defined
 
    - name: Check to see if bigip server credential missing
      fail:
-       msg: "You must provide a 'bigip_server' variable
+       msg: "You must provide a 'bigip_server' variable"
      when: bigip_server is not defined
 
 This accomplishes bullets #4 to #6
@@ -242,15 +242,16 @@ Edit the ``tasks/main.yaml`` file to include the following
        server: "{{ bigip_server }}"
        server_port: "{{ bigip_port }}"
      delegate_to: localhost
-   ```
 
-   This accomplishes bullets #8 to #14
+This accomplishes bullets #8 to #14
 
 Move files to the appropriate directories
 `````````````````````````````````````````
 
 In the task list above, we use an iRule file. To make use of it in this role, we
 need to put it in the ``files`` directory because we used the ``file`` lookup.
+
+From the ``lab3.10`` directory, issue the following command
 
   ::
 
