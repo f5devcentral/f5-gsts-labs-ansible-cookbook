@@ -103,6 +103,12 @@ file to read
 
 * ``ansible_python_interpreter=/.virtualenvs/lab4.6/bin/python``
 
+Let's re-run the playbook now
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
+
 Take a moment to review the images below for a better understanding of what Ansible
 is doing.
 
