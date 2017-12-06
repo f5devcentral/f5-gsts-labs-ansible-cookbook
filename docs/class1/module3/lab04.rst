@@ -68,7 +68,7 @@ You can do this by specifying the Task name to the ``-—start-at-task`` argumen
 
   ::
 
-   $ ansible-playbook -i inventory/hosts site.yaml --start-at-task "Create HTTP Monitor - Idempotent check"
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml --start-at-task "Create HTTP Monitor - Idempotent check"
 
 The Play will run, but will start at the third Task this time.
 

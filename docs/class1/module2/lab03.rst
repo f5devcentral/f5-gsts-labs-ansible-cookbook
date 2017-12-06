@@ -32,7 +32,7 @@ Use the ``bigip_node`` module.
        - name: Create node for physical machine
          bigip_node:
            address: 10.1.20.11
-           name: node-1
+           name: server
            password: "{{ password }}"
            server: 10.1.1.4
            user: "{{ username }}"

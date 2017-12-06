@@ -33,7 +33,7 @@ Use the ``bigip_pool_member`` module.
          bigip_pool_member:
            description: webserver-1
            host: 10.1.20.11
-           name: node-1
+           name: server
            password: "{{ password }}"
            pool: web-servers
            port: 80

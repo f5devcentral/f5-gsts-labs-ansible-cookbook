@@ -37,7 +37,6 @@ For example,
 #. Add a ``server`` host to the ansible inventory and give it,
 
    * an ``ansible_host`` fact with the value ``10.1.1.6``
-   * add an ``ansible_python_interpreter`` fact with the value ``/usr/bin/python3``
 
 #. *Type* the following into the ``playbooks/site.yaml`` file.
 
@@ -55,9 +54,11 @@ For example,
      tasks:
          - name: Disable pool member for upgrading
            bigip_pool_member:
-             pool: foo
+             pool: web-servers
+             port: 80
              name: "{{ inventory_hostname }}"
-             state: disabled
+             monitor_state: disabled
+             session_state: disabled
              password: "{{ password }}"
              server: 10.1.1.4
              user: "{{ username }}"
@@ -70,9 +71,11 @@ For example,
 
          - name: Re-enable pool member after upgrading
            bigip_pool_member:
-             pool: foo
+             pool: web-servers
+             port: 80
              name: "{{ inventory_hostname }}"
-             state: enabled
+             monitor_state: enabled
+             session_state: enabled
              password: "{{ password }}"
              server: 10.1.1.4
              user: "{{ username }}"
@@ -91,7 +94,27 @@ The second task is not what you want because it attempts to run the ``apt`` modu
 your **local** machine. Your playbook, however, intended to upgrade the **remote**
 webserver.
 
-So you installed apache on the Ansible controller machine. Whoops.
+So you installed apache on the Ansible controller machine.
+
+You can verify this with the following command
+
+* ``dpkg --list | grep apache``
+
+For example, here is the output on my ansible controller
+
+  ::
+
+   $ dpkg --list | grep apache
+   ii  apache2                          2.4.18-2ubuntu3.5                          amd64        Apache HTTP Server
+   ii  apache2-bin                      2.4.18-2ubuntu3.5                          amd64        Apache HTTP Server (modules and other binary files)
+   ii  apache2-data                     2.4.18-2ubuntu3.5                          all          Apache HTTP Server (common files)
+   ii  apache2-utils                    2.4.18-2ubuntu3.5                          amd64        Apache HTTP Server (utility programs for web servers)
+
+Whoops.
+
+You can remove apache on the Ansible controller with this command
+
+* ``apt-get remove --purge apache2*``
 
 Delegation
 ``````````
@@ -120,10 +143,11 @@ For example, this playbook will correct your problem:
      tasks:
          - name: Disable pool member for upgrading
            bigip_pool_member:
-             pool: foo
+             pool: web-servers
              port: 80
              name: "{{ inventory_hostname }}"
-             state: disabled
+             monitor_state: disabled
+             session_state: disabled
              password: "{{ password }}"
              server: 10.1.1.4
              user: "{{ username }}"
@@ -137,10 +161,11 @@ For example, this playbook will correct your problem:
 
          - name: Re-enable pool member after upgrading
            bigip_pool_member:
-             pool: foo
+             pool: web-servers
              port: 80
              name: "{{ inventory_hostname }}"
-             state: enabled
+             monitor_state: enabled
+             session_state: enabled
              password: "{{ password }}"
              server: 10.1.1.4
              user: "{{ username }}"
@@ -170,10 +195,9 @@ of the ``{{ inventory_hostname }}`` variable?
 2. server
 3. something else
 
-If you answered ``my-web-server`` then you are correct.
+If you answered ``server`` then you are correct.
 
-This is **context**. The task executed on localhost using ``my-web-server``’s
+This is **context**. The task executed on localhost using ``server``’s
 context, and therefore, its ``facts``.
-
 
 .. _is here: http://clouddocs.f5.com/products/orchestration/ansible/devel/usage/connection-local-or-delegate-to.html
