@@ -23,7 +23,7 @@ Use the ``apt`` module.
      hosts: server
 
      tasks:
-       - name: Copy a local file to the remote system
+       - name: Install apache
          apt:
            name: apache2
            update_cache: yes
