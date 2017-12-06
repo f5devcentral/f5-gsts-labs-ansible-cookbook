@@ -25,7 +25,7 @@ ensure runs without error, it is
 
   ::
 
-   $ curl -k -u admin:admin https://bigip/mgmt/tm/sys | jq .
+   $ curl -k -u admin:admin https://10.1.1.4/mgmt/tm/sys | jq .
 
 Replace ``admin:admin`` with your ``user``, and ``password`` combination. If the
 above command does not succeed, then it will not be possible for the F5 Ansible
