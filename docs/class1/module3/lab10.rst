@@ -147,7 +147,7 @@ In this file, put the following
        msg: "You must provide a 'bigip_server' variable"
      when: bigip_server is not defined
 
-This accomplishes bullets #4 to #6
+This accomplishes bullets #4 to #7
 
 Create a main task list
 ```````````````````````
