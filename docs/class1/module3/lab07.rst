@@ -38,11 +38,11 @@ Use the ``bigip_irule`` module and the ``loop`` keyword.
             name: "{{ item.name }}"
           loop:
             - name: irule1
-              file: irule-01.tcl
+              file: ../files/irule-01.tcl
             - name: irule2
-              file: irule-02.tcl
+              file: ../files/irule-02.tcl
             - name: irule3
-              file: irule-03.tcl
+              file: ../files/irule-03.tcl
 
 Run this playbook, from the ``lab3.7`` directory like so
 
