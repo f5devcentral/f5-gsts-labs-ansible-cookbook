@@ -12,7 +12,7 @@ Solution
 This is possible, but it requires a keen understanding of how Ansible works, as well as a change to the host_vars for a single host
 (or group_vars if you want to apply this to multiple hosts)
 
-#. Change into tje ``lab3.9`` directory in the ``labs`` directory.
+#. Change into the ``lab3.9`` directory in the ``labs`` directory.
 #. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
 #. Change the ``playbooks/site.yaml`` file to resemble the following.
 #. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
@@ -71,11 +71,11 @@ Let’s now run the Ansible Playbook.
 
   ::
 
-   $ ansible-playbook -i inventory/hosts playbooks/lab3.9.yaml
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
 
 If your playbook fails, that is to be expected.
 
-Now, change the ``inventory/group_vars/all.yaml`` file and add the following line.
+Now, change the ``inventory/hosts`` file and add the following fact to the `bigip` line.
 
   ::
 
@@ -122,5 +122,7 @@ to ``/usr/bin/python``. If you installed your dependencies in a virtualenv, that
 virtualenv’s python is not ``/usr/bin/python``.
 
 This is why you **must** set the ``ansible_python_interpreter`` for any hosts, or groups
-of hosts, where the python interpreter differs. We did this in our solution when we
-changed the ``inventory/group_vars/all.yaml`` file.
+of hosts, where the python interpreter differs. We did this in our solution for a single
+host when we changed the ``inventory/hosts`` file. We could have also created a file
+at ``inventory/group_vars/all.yaml`` and those facts would apply to **all** hosts in your
+playbook.

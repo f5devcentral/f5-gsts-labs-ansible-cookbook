@@ -14,8 +14,8 @@ Use Roles.
 
 *You may combine any set of Tasks that we have used previously in this role.*
 
-A role is an abstraction in which a /directory named after the role/ is created
-in the ``roles` directory. In the first module, we learned about the
+A role is an abstraction in which a *directory named after the role* is created
+in the ``roles`` directory. In the first module, we learned about the
 :doc:`expected file layout</class1/module1/lab03>`. Part of this layout is a ``roles``
 directory. It is that directory in which you put the role directory.
 
@@ -170,7 +170,7 @@ Edit the ``tasks/main.yaml`` file to include the following
 
    - name: Create pool
      bigip_pool:
-       name: app-pool1
+       name: "{{ tenant }}-pool1"
        lb_method: round-robin
        partition: "{{ tenant }}"
        user: "{{ bigip_username }}"
@@ -196,7 +196,7 @@ Edit the ``tasks/main.yaml`` file to include the following
    - name: Create virtual server
      bigip_virtual_server:
        name: app1-vs
-       destination: 10.1.10.240
+       destination: "{{ vs_destination }}"
        port: 80
        irules:
          - irule1
@@ -222,7 +222,7 @@ Edit the ``tasks/main.yaml`` file to include the following
 
    - name: Add node to pool
      bigip_pool_member:
-       pool: app-pool1
+       pool: "{{ tenant }}-pool1"
        partition: "{{ tenant }}"
        host: "{{ ansible_host }}"
        port: 80
@@ -263,7 +263,7 @@ With the above in place, you can run the playbook as you normally would
 
   ::
 
-   $ ansible-playbook -i inventory/hosts lab3.10.yaml
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
 
 Your play, and role, should execute as expected and configure the device.
 

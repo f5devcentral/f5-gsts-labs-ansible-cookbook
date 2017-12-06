@@ -35,6 +35,12 @@ Use the ``bigip_command`` module
          bigip_command:
            commands: "create /ltm data-group internal applicationIdRealm type string records add { epc.foo.bar.org { data 16777264 } }"
 
+Run this playbook, from the ``lab3.8`` directory like so
+
+  ::
+
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
+
 Discussion
 ----------
 
