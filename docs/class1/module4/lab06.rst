@@ -116,7 +116,7 @@ This is how Ansible normally works
 
 |image1|
 
-In the virtualenv situation above, what we had instead instead, is that the Ansible
+In the virtualenv situation above, what we had instead, is that the Ansible
 client had the F5 SDK installed in one virtualenv, but the remote host used a different
 virtualenv. Therefore, we had a similar situation as the picture above, but using
 virtualenv instead
