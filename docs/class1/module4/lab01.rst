@@ -14,11 +14,11 @@ Provide the ``-vvvv`` argument to the ``ansible-playbook`` command.
 
 Enabling verbose output can be done as follows,
 
-#. Change into the ``lab3.8`` directory in the ``labs`` directory.
+#. Change into the ``lab4.1`` directory in the ``labs`` directory.
 
   ::
 
-   $ ansible-playbook -i inventory/hosts site.yaml -vvvv
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml -vvvv
 
 Running this will output more output that you would normally get. This
 playbook includes an artificial module with an error message that would not

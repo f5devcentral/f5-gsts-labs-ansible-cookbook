@@ -24,7 +24,7 @@ This is normal output
 
   ::
 
-   $ ansible-playbook -i inventory/hosts playbooks/lab4.5.yaml
+   $ ansible-playbook -i inventory/hosts playbooks/site.yaml
 
    PLAY [Labb 4.5] ***********************************************
 
@@ -49,7 +49,7 @@ This is verbose output (truncated for readability)
 
   ::
 
-   $ ANSIBLE_DEBUG=1 ansible-playbook -i inventory/hosts playbooks/lab4.5.yaml
+   $ ANSIBLE_DEBUG=1 ansible-playbook -i inventory/hosts playbooks/site.yaml
     88233 1512328569.77688: starting run
     88233 1512328569.87126: Added group all to inventory
     88233 1512328569.87134: Added group ungrouped to inventory
