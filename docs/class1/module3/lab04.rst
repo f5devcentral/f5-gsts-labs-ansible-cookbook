@@ -72,6 +72,11 @@ You can do this by specifying the Task name to the ``-—start-at-task`` argumen
 
 The Play will run, but will start at the third Task this time.
 
+But there's an error that's raised. Why?
+
+The answer, is because you started at the task which is intended to be the idempotent
+check. Run the playbook again. Does the result change?
+
 Discussion
 ----------
 
