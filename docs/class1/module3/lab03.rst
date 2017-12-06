@@ -9,7 +9,7 @@ You need to know when to use ``connection: local`` and ``delegate_to: localhost`
 Solution
 --------
 
-An explanation of the difference between these two [is here](http://clouddocs.f5.com/products/orchestration/ansible/devel/usage/connection-local-or-delegate-to.html). It is reprinted here for your convenience.
+An explanation of the difference between these two `is here`_. It is reprinted here for your convenience.
 
 There are three major differences between ``connection: local` and
 ``delegate_to: localhost``:
@@ -172,3 +172,6 @@ If you answered ``my-web-server`` then you are correct.
 
 This is **context**. The task executed on localhost using ``my-web-server``’s
 context, and therefore, its ``facts``.
+
+
+.. _is here: http://clouddocs.f5.com/products/orchestration/ansible/devel/usage/connection-local-or-delegate-to.html
