@@ -63,8 +63,8 @@ We have configured our hosts to reference two different python interpreters.
 The ``broken`` host, references a python interpreter that is intended to mimic your
 non-virtualenv remote system (I know its referencing a virtualenv, imagine with me here).
 
-The ``working`` python interpreter is is intended to mimic the virtualenv that you
-have installed audible on.
+The ``working`` python interpreter is intended to mimic the virtualenv that you
+have installed Ansible in.
 
 Change into the working virtualenv.
 
