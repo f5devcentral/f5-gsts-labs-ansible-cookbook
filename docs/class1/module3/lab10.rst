@@ -215,7 +215,7 @@ Edit the ``tasks/main.yaml`` file to include the following
 
    - name: Create node for physical machine
      bigip_node:
-       address: "{{ ansible_host }}"
+       address: "{{ node_destination }}"
        name: "{{ inventory_hostname }}"
        user: "{{ bigip_username }}"
        password: "{{ bigip_password }}"
@@ -228,7 +228,7 @@ Edit the ``tasks/main.yaml`` file to include the following
      bigip_pool_member:
        pool: "{{ tenant }}-pool1"
        partition: "{{ tenant }}"
-       host: "{{ ansible_host }}"
+       host: "{{ node_destination }}"
        port: 80
        user: "{{ bigip_username }}"
        password: "{{ bigip_password }}"
