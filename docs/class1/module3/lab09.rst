@@ -9,7 +9,8 @@ You need to run Ansible from a Python virtualenv environment
 Solution
 --------
 
-This is possible, but it requires a keen understanding of how Ansible works, as well as a change to the host_vars for a single host (or group_vars if you want to apply this to multiple hosts)
+This is possible, but it requires a keen understanding of how Ansible works, as well as a change to the host_vars for a single host
+(or group_vars if you want to apply this to multiple hosts)
 
 #. Change into tje ``lab3.9`` directory in the ``labs`` directory.
 #. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.

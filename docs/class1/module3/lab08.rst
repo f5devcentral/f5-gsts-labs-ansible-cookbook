@@ -9,13 +9,13 @@ You need to use a tmsh command that does not have an Ansible module equivalent
 Solution
 --------
 
-Use the `bigip_command` module
+Use the ``bigip_command`` module
 
-#. Change into the ``lab3.8`` directory in the ``labs`` directory.
+#. Create a ``lab3.8`` directory in the ``labs`` directory.
 #. Setup the filesystem layout to mirror the one :doc:`described in lab 1.3</class1/module1/lab03>`.
-#. Change the ``playbooks/site.yaml`` file to resemble the following.
 #. Add a ``bigip`` host to the ansible inventory and give it an ``ansible_host``
    fact with the value ``10.1.1.4``
+#. *Type* the following into the ``playbooks/site.yaml`` file.
 
   ::
 
