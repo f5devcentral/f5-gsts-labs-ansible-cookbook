@@ -19,6 +19,8 @@ Use the ``--start-at-task`` argument of ``ansible-playbook``
 
  ::
 
+   ---
+
    - name: An example start-at playbook
      hosts: bigip
      connection: local

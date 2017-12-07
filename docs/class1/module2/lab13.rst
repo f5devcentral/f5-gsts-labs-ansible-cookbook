@@ -20,6 +20,8 @@ for the device to come back up and be ready to take configuration.
 
   ::
 
+   ---
+
    - name: An example configuration saving playbook
      hosts: bigip
      connection: local

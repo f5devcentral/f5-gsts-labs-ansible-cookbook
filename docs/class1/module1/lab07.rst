@@ -19,6 +19,8 @@ Use the ``apt`` module.
 
  ::
 
+   ---
+
    - name: An example install playbook
      hosts: server
 

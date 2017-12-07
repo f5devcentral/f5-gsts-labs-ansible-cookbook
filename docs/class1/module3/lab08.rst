@@ -19,6 +19,8 @@ Use the ``bigip_command`` module
 
   ::
 
+   ---
+
    - name: An example command playbook
      hosts: bigip
      connection: local

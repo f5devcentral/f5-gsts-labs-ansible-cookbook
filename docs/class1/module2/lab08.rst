@@ -19,6 +19,8 @@ Use the ``bigip_provision`` module.
 
  ::
 
+   ---
+
    - name: An example provision playbook
      hosts: bigip
      connection: local

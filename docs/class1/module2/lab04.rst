@@ -19,6 +19,8 @@ Use the ``bigip_pool_member`` module.
 
  ::
 
+   ---
+
    - name: An example pool members playbook
      hosts: bigip
      connection: local

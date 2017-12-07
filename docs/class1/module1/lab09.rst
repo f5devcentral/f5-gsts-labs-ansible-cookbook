@@ -19,6 +19,7 @@ Use the ``template`` module.
 
  ::
 
+   ---
 
    - name: An example template playbook
      hosts: server

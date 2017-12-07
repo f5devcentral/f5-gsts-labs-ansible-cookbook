@@ -20,6 +20,8 @@ Use variables.
 
  ::
 
+   ---
+
    - name: An example copy playbook
      hosts: bigip
 

@@ -42,6 +42,8 @@ For example,
 
   ::
 
+   ---
+
    - name: This is my play
      hosts: server
      connection: local
@@ -131,6 +133,8 @@ For example, this playbook will correct your problem:
 #. Change your ``playbooks/site.yaml`` file to reflect the changes below.
 
   ::
+
+   ---
 
    - name: This is my play
      hosts: server

@@ -19,6 +19,8 @@ Use the ``copy`` module.
 
  ::
 
+   ---
+
    - name: An example copy playbook
      hosts: server
 

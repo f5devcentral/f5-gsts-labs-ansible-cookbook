@@ -19,6 +19,8 @@ Use the ``bigip_virtual_server`` module.
 
  ::
 
+   ---
+
    - name: An example virtual server playbook
      hosts: bigip
      connection: local

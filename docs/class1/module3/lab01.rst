@@ -19,6 +19,8 @@ Use the ``vars_prompt`` block in your Playbook.
 
   ::
 
+   ---
+
    - name: An example prompting playbook
      hosts: server
 
@@ -64,6 +66,8 @@ playbook.
 #. *Type* the following into the ``playbooks/site2.yaml`` file.
 
   ::
+
+   ---
 
    - name: An example pool playbook
      hosts: bigip

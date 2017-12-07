@@ -20,6 +20,8 @@ Use the ``bigip_partition`` module.
 
   ::
 
+   ---
+
    - name: An example partition playbook
      hosts: bigip
      connection: local

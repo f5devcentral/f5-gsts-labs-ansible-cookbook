@@ -20,6 +20,8 @@ Use the ``--step`` argument of ``ansible-playbook``
 
  ::
 
+   ---
+
    - name: An example stepped playbook
      hosts: bigip
      connection: local

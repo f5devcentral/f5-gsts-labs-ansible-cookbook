@@ -30,6 +30,8 @@ Use the ``bigip_asm_policy`` to put the Policy on the BIG-IP and activate it.
 
   ::
 
+   ---
+
    - name: An example ASM policy playbook
      hosts: bigip
      connection: local

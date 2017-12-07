@@ -19,6 +19,8 @@ Use the ``bigip_user`` module.
 
   ::
 
+   ---
+
    - name: An example user modification playbook
      hosts: bigip
      connection: local

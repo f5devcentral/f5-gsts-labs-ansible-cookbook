@@ -19,30 +19,32 @@ Use the ``bigip_irule`` module and the ``loop`` keyword.
 
   ::
 
-    - name: An example looping iRule playbook
-      hosts: bigip
-      connection: local
+   ---
 
-      environment:
-        F5_SERVER: "{{ ansible_host }}"
-        F5_USER: admin
-        F5_PASSWORD: admin
-        F5_SERVER_PORT: 443
-        F5_VALIDATE_CERTS: no
+   - name: An example looping iRule playbook
+     hosts: bigip
+     connection: local
 
-      tasks:
-        - name: Create iRule in LTM
-          bigip_irule:
-            content: "{{ lookup('file', item.file) }}"
-            module: ltm
-            name: "{{ item.name }}"
-          loop:
-            - name: irule1
-              file: ../files/irule-01.tcl
-            - name: irule2
-              file: ../files/irule-02.tcl
-            - name: irule3
-              file: ../files/irule-03.tcl
+     environment:
+       F5_SERVER: "{{ ansible_host }}"
+       F5_USER: admin
+       F5_PASSWORD: admin
+       F5_SERVER_PORT: 443
+       F5_VALIDATE_CERTS: no
+
+     tasks:
+       - name: Create iRule in LTM
+         bigip_irule:
+           content: "{{ lookup('file', item.file) }}"
+           module: ltm
+           name: "{{ item.name }}"
+         loop:
+           - name: irule1
+             file: ../files/irule-01.tcl
+           - name: irule2
+             file: ../files/irule-02.tcl
+           - name: irule3
+             file: ../files/irule-03.tcl
 
 Run this playbook, from the ``lab3.7`` directory like so
 

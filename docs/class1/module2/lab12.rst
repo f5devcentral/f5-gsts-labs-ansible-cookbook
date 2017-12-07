@@ -19,6 +19,8 @@ Use the ``bigip_config`` module.
 
   ::
 
+   ---
+
    - name: An example configuration saving playbook
      hosts: bigip
      connection: local

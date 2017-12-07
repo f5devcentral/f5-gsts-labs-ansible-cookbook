@@ -21,6 +21,8 @@ on that rule as needed.
 
   ::
 
+   ---
+
    - name: An example LTM policy playbook
      hosts: bigip
      connection: local

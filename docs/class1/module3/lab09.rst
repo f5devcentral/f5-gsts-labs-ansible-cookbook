@@ -20,6 +20,8 @@ This is possible, but it requires a keen understanding of how Ansible works, as 
 
   ::
 
+   ---
+
    - name: An example command playbook
      hosts: bigip
      connection: local

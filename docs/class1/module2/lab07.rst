@@ -19,6 +19,8 @@ Use the ``bigip_iapp_service`` module.
 
  ::
 
+   ---
+
    - name: An example iApp service playbook
      hosts: bigip
      connection: local
