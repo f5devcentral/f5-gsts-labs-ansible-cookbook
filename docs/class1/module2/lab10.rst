@@ -35,11 +35,19 @@ on that rule as needed.
        - name: Provision ASM
          bigip_provision:
            module: asm
+           password: "{{ password }}"
+           server: 10.1.1.4
+           validate_certs: "{{ validate_certs }}"
+           user: "{{ username }}"
 
        - name: Create ASM policy
          bigip_asm_policy:
            name: foo-policy
            file: ../files/v2_policy_compact.xml
+           password: "{{ password }}"
+           server: 10.1.1.4
+           validate_certs: "{{ validate_certs }}"
+           user: "{{ username }}"
 
        - name: Create published policy with 1 stubbed rule
          bigip_policy:
@@ -47,6 +55,10 @@ on that rule as needed.
            state: present
            rules:
              - rule1
+           password: "{{ password }}"
+           server: 10.1.1.4
+           validate_certs: "{{ validate_certs }}"
+           user: "{{ username }}"
 
        - name: Attach ASM policy to LTM policy rule
          bigip_policy_rule:
@@ -55,6 +67,10 @@ on that rule as needed.
            actions:
              - type: enable
                asm_policy: foo-policy
+           password: "{{ password }}"
+           server: 10.1.1.4
+           validate_certs: "{{ validate_certs }}"
+           user: "{{ username }}"
 
 Run this playbook, from the ``lab2.10`` directory like so
 
