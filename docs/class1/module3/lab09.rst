@@ -102,8 +102,8 @@ your module in the virtualenv. It’s running it on the system’s Python.
 That doesn’t make sense though, it should be running be running in the virtualenv.
 Wrong.
 
-A brief segway is necessary
-```````````````````````````
+A brief segue is necessary
+``````````````````````````
 
 Ansible’s default behavior is that it **always** SSH’s to the remote host. Always.
 Even when ``connection: local`` is set, it is running...in a sense...on the “remote” host;
