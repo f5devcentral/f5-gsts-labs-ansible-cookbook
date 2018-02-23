@@ -37,7 +37,8 @@ Use the ``bigip_iapp_service`` module.
            password: "{{ password }}"
            server: 10.1.1.4
            state: present
-           user: admin
+           user: "{{ username }}"
+           validate_certs: "{{ validate_certs }}"
 
        - name: Add the iApp Service
          bigip_iapp_service:

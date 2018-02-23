@@ -33,11 +33,12 @@ Use the ``bigip_iapp_template`` module.
      tasks:
        - name: Add the iApp
          bigip_iapp_template:
-           content: "{{ lookup('file', 'appsvcs_integration_v2.0.004.tmpl') }}"
+           content: "{{ lookup('file', '../files/appsvcs_integration_v2.0.004.tmpl') }}"
            password: "{{ password }}"
            server: 10.1.1.4
            state: present
-           user: admin
+           user: "{{ username }}"
+           validate_certs: "{{ validate_certs }}"
 
 Run this playbook, from the ``lab2.6`` directory like so
 
