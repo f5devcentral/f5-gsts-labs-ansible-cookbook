@@ -1,4 +1,4 @@
-Module – Debugging Ansible problems
+Module 4 – Debugging Ansible problems
 ===================================
 
 An advanced, but equally necessary topic is debugging. It is

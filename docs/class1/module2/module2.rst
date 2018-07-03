@@ -1,4 +1,4 @@
-Module – Basic |bip| administration with Ansible
+Module 2 – Basic |bip| administration with Ansible
 ================================================
 
 Once you have installed and configured Ansible, you will want to

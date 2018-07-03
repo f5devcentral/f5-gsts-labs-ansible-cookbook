@@ -15,7 +15,6 @@ Expected time to complete: **2 hours**
 
 .. toctree::
    :maxdepth: 1
-   :numbered: 2
    :glob:
 
    module*/module*
