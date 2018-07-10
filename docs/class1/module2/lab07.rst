@@ -70,7 +70,7 @@ Use the ``bigip_iapp_service`` module.
                    - connection_limit
                  rows:
                    - row:
-                       - ""
+                       - 20.20.20.20
                        - 80
                        - 0
                - name: server_pools__servers
