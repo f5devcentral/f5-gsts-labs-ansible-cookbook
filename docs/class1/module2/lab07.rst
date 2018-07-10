@@ -75,16 +75,12 @@ Use the ``bigip_iapp_service`` module.
                        - 0
                - name: server_pools__servers
              variables:
-               - name: var__vs_address
-                 value: 1.1.1.1
-               - name: pm__apache_servers_for_http
-                 value: 2.2.2.1:80
-               - name: pm__apache_servers_for_https
-                 value: 2.2.2.2:80
                - name: client__http_compression
                  value: "/#create_new#"
                - name: monitor__monitor
                  value: "/#create_new#"
+               - name: monitor__response
+                 value: no
                - name: monitor__uri
                  value: "/"
                - name: net__client_mode
