@@ -1,5 +1,5 @@
 Module 3 – Slightly more advanced Ansible usage
-=============================================
+===============================================
 
 Basic administration should serve you well for quite some time.
 

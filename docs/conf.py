@@ -1,5 +1,21 @@
 # -*- coding: utf-8 -*-
 #
+#
+# BEGIN CONFIG
+# ------------
+#
+# REQUIRED: Your class/lab name
+classname = "F5 Ansible Cookbook"
+
+# OPTIONAL: The URL to the GitHub Repository for this class
+github_repo = "https://github.com/f5devcentral/f5-gsts-labs-ansible-cookbook"
+
+# OPTIONAL: Google Analytics
+# googleanalytics_id = 'UA-85156643-4'
+
+#
+# END CONFIG
+# ----------
 
 import os
 import sys
@@ -10,25 +26,8 @@ import string
 sys.path.insert(0, os.path.abspath('.'))
 import f5_sphinx_theme
 
-#
-# BEGIN CONFIG
-# ------------
-#
-# REQUIRED: Your class/lab name
-classname = "Ansible Cookbook"
-
-# OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/f5-gsts-labs-ansible-cookbook"
-
-# OPTIONAL: Google Analytics
-# googleanalytics_id = 'UA-85156643-4'
-
 year = time.strftime("%Y")
-eventname = "GSTS %s Ansible Cookbook Lab Guide" % (year)
-
-#
-# END CONFIG
-# ----------
+eventname = "Agility %s Hands-on Lab Guide" % (year)
 
 rst_prolog = """
 .. |classname| replace:: %s
@@ -86,7 +85,7 @@ print "on_snops = %s" % on_snops
 extensions = [
   'sphinxjp.themes.basicstrap',
   'sphinx.ext.todo',
-  'sphinx.ext.autosectionlabel'
+  #'sphinx.ext.autosectionlabel'
 ]
 
 if 'googleanalytics_id' in locals() and len(googleanalytics_id) > 0:
@@ -258,6 +257,3 @@ texinfo_documents = [
      author, classname, classname,
      'Training'),
 ]
-
-
-

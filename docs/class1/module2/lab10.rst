@@ -99,7 +99,7 @@ module can be used to re-arrange them. Just specify the list of rules in the
 order you want them applied.
 
 At the time of this writing, only a handful of ``conditions`` and ``actions`` are
-available for use in the ``bigip_policy_rule`` module. You may :doc:`file an issue</class1/module4/lab3>`.
+available for use in the ``bigip_policy_rule`` module. You may :doc:`file an issue</class1/module4/lab03>`.
 if you need a particular condition or action added.
 
 Available ``conditions`` types are,
