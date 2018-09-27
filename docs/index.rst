@@ -1,15 +1,15 @@
-F5 GSTS Ansible Cookbook Labs - Index
-=====================================
+Welcome to the F5 Labs for Ansible Cookbooks
+============================================
 
-Welcome
--------
+The purpose of these labs is to give you better understanding of...
 
-Welcome to the |classbold| lab at F5 GSTS |year|
-
-|repoinfo|
+- Ansible Installation and Configuration
+- Basic BIG-IP Administration with Ansible
+- Slightle More Advanced Ansible Usage
+- Debugging Ansible
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
    :glob:
 
