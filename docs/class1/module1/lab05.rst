@@ -11,7 +11,7 @@ Solution
 
 Create, or change, an ``ansible.cfg`` file that specifies the ``library`` setting.
 
-I recommend that you put an ``ansible.cfg`` file at the :doc:`top level<./lab3>` of
+I recommend that you put an ``ansible.cfg`` file at the :doc:`top level<./lab03>` of
 your Ansible related work.
 
 Then add the following line to the ``ansible.cfg`` file ::

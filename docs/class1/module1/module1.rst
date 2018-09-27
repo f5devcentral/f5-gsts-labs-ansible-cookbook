@@ -1,7 +1,7 @@
 .. _module1:
 
-Module 1 – Installation and configuration of Ansible
-==================================================
+Module 1 – Installation and Configuration of Ansible
+====================================================
 
 The first step in using Ansible with an F5 product is to ensure that you
 have done the absolute minimum required to make Ansible work.

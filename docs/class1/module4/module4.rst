@@ -1,5 +1,5 @@
 Module 4 – Debugging Ansible problems
-===================================
+=====================================
 
 An advanced, but equally necessary topic is debugging. It is
 inevitable that things will go wrong.

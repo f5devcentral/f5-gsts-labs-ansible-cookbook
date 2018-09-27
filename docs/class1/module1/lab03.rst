@@ -78,4 +78,4 @@ The purpose of each directory is the following,
 * ``templates``
 
   * contains files that will be treated as templates and referenced by the
-  ``template`` module.
+    ``template`` module.
