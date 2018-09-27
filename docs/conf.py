@@ -5,7 +5,7 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "F5 Ansible Cookbook"
+classname = "F5 Labs for Ansible Cookbooks"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/f5devcentral/f5-gsts-labs-ansible-cookbook"
